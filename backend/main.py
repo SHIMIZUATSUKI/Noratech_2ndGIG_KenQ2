@@ -78,6 +78,13 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         raise credentials_exception
     return user
 
+
+# エンドポイントを追加
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+
+
 # 顧客情報を新規登録するエンドポイント
 @app.post("/customers/", response_model=schemas.Customer)
 def create_customer(customer: schemas.CustomerCreate, db: Session = Depends(get_db)):
