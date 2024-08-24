@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 
 # .envファイルを読み込む
-load_dotenv(dotenv_path='.env')
+load_dotenv()
 
 # 環境変数からデータベース接続情報を取得
 DB_HOST = os.getenv("DB_HOST")

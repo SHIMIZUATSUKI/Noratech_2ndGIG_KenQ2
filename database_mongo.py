@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from fastapi import HTTPException
 
 # 環境変数をロード
-load_dotenv(dotenv_path='.env')
+load_dotenv()
 
 # MongoDBの接続情報を取得
 MONGO_URI = os.getenv("MONGO_URI")
