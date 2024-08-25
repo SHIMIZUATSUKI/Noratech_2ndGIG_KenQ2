@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, Date, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
-from .database import Base
+from database import Base
 
 # 顧客情報のモデル
 class CustomerInformation(Base):

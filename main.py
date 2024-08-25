@@ -1,8 +1,8 @@
 # main.py
 from fastapi import FastAPI, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from .database import engine, get_db, Base, SessionLocal
-from . import models, schemas, crud
+from database import engine, get_db, Base, SessionLocal
+import models, schemas, crud
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from fastapi.middleware.cors import CORSMiddleware
 from jose import JWTError, jwt

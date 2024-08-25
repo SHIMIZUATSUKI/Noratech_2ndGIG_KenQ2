@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-from .database_mongo import get_mongo_collection
+from database_mongo import get_mongo_collection
 
 def get_embedding(text):
     """
