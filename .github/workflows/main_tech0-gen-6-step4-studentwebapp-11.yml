@@ -57,7 +57,7 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: 'Deploy to Azure Web App using ZipDeploy'
+      - name: 'Deploy to Azure Web App using Run From Package'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
@@ -65,3 +65,5 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B046D57340AF42F59AA02F1411EA7B63 }}
           package: 'release.zip'
           runtime-stack: 'PYTHON|3.11'
+          slot-name: 'Production'
+
